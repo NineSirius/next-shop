@@ -1,0 +1,39 @@
+.input-wrap
+    position: relative
+    width: 100%
+
+.input
+    width: 100%
+    height: 100%
+    border: 2px solid #cecece
+    border-radius: 10px
+    padding: 10px 15px
+    outline: none
+    transition: .2s
+
+.placeholder
+    pointer-events: none
+    position: absolute
+    top: 50%
+    left: 10px
+    transform: translateY(-50%)
+    transition: .2s
+    padding: 0 5px
+    background: #fff
+
+.input:disabled
+    color: #cecece
+
+    & ~ .placeholder
+        color: #cecece
+
+    &:hover
+        cursor: not-allowed
+
+.input:focus ~ .placeholder,
+.input:valid ~ .placeholder
+    top: 0
+    font-size: 0.875rem
+
+.input:focus
+    border: 2px solid blue
